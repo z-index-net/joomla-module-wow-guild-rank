@@ -36,6 +36,12 @@
                     <option value="realm">MOD_WOW_GUILD_RANK_DISPLAY_REALM</option>
                     <option value="world">MOD_WOW_GUILD_RANK_DISPLAY_WORLD</option>
                 </field>
+                <field name="color" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_COLOR_LABEL">
+                    <option value="gold">MOD_WOW_GUILD_RANK_COLOR_GOLD</option>
+                    <option value="silver">MOD_WOW_GUILD_RANK_COLOR_GOLD</option>
+                    <option value="bronze">MOD_WOW_GUILD_RANK_COLOR_BRONZE</option>
+                    <option value="white">MOD_WOW_GUILD_RANK_COLOR_WHITE</option>
+                </field>
                 <field name="guild" type="text" default="" size="30" required="true" label="MOD_WOW_GUILD_RANK_GUILD_LABEL" />
                 <field name="realm" type="text" default="" size="30" required="true" label="MOD_WOW_GUILD_RANK_REALM_LABEL" />
                 <field name="region" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_REGION_LABEL">

@@ -13,9 +13,9 @@ JFactory::getDocument()->addStyleSheet(JUri::base(true) . '/modules/' . $module-
 
 ?>
 <div class="mod_wow_guild_rank">
-	<div class="container<?php echo $rank->class . $rank->size; ?>">
-		<?php echo $rank->display; ?>
-	</div>
-	<span class="display"><?php echo JText::_('MOD_WOW_GUILD_RANK_DISPLAY_' . strtoupper($params->get('display', 'realm'))); ?></span>
+    <div class="rank <?php echo $params->get('color', 'gold') . $rank->size; ?>">
+        <?php echo $rank->display; ?>
+    </div>
+    <span class="display"><?php echo JText::_('MOD_WOW_GUILD_RANK_DISPLAY_' . strtoupper($params->get('display', 'realm'))); ?></span>
     <?php echo JHtml::_('link', $rank->url, parse_url($rank->url, PHP_URL_HOST), array('target' => '_blank')); ?>
 </div>
