@@ -44,7 +44,7 @@ abstract class mod_wow_guild_rank
                 break;
         }
         
-        $retval->display = 1; //$retval->{$params->get('display', 'realm')};
+        $retval->display = $retval->{ $params->get('display', 'realm') };
         
         $retval->class = ($retval->display <= 3) ? ' rank_' . $retval->display : ' rank_0';
         
