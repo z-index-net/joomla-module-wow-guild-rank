@@ -31,6 +31,11 @@
                     <option value="guildox">GuildOx</option>
                     <option value="wowprogress">WoWProgress</option>
                 </field>
+                <field name="display" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_DISPLAY_LABEL">
+                    <option value="">JSELECT</option>
+                    <option value="realm">MOD_WOW_GUILD_RANK_DISPLAY_REALM</option>
+                    <option value="world">MOD_WOW_GUILD_RANK_DISPLAY_WORLD</option>
+                </field>
                 <field name="guild" type="text" default="" size="30" required="true" label="MOD_WOW_GUILD_RANK_GUILD_LABEL" />
                 <field name="realm" type="text" default="" size="30" required="true" label="MOD_WOW_GUILD_RANK_REALM_LABEL" />
                 <field name="region" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_REGION_LABEL">

@@ -1,3 +1,62 @@
 .mod_wow_guild_rank {
-	
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	position: relative;
+	text-align: center;
+}
+
+.mod_wow_guild_rank .container {
+	background-repeat: no-repeat;
+	background-size: 200px 200px;
+	height: 200px;
+	width: 200px;
+	margin: 0 auto;
+	line-height: 155px;
+	font-weight: bold;
+	user-select: none;
+}
+
+.mod_wow_guild_rank .container.size9 {
+	font-size: 120px;
+}
+
+.mod_wow_guild_rank .container.size99 {
+	font-size: 80px;	
+}
+
+.mod_wow_guild_rank .container.size999 {
+	font-size: 50px;
+}
+
+.mod_wow_guild_rank .rank_0 {
+	background-image: url('./images/rank_0.png');
+	color: #fff;
+	text-shadow: 1px 1px #868789;
+}
+
+.mod_wow_guild_rank .rank_1 {
+	background-image: url('./images/rank_1.png');
+	color: #F8B32C;
+}
+
+.mod_wow_guild_rank .rank_2 {
+	background-image: url('./images/rank_2.png');
+	color: #B5B7B5;
+}
+
+.mod_wow_guild_rank .rank_3 {
+	background-image: url('./images/rank_3.png');
+	color: #AE6848;
+}
+
+.mod_wow_guild_rank .display {
+	position: absolute;
+	bottom: 30px;
+	left: 88px; color : white;
+	text-shadow: 1px 1px #000;
+	font-weight: bold;
+	font-size: 25px;
+	color: white;
 }
