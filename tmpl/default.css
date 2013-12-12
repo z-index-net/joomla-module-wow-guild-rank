@@ -1,21 +1,56 @@
 .mod_wow_guild_rank {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
     position: relative;
     text-align: center;
+    width: 200px;
+    height: 220px;
+    margin: 0 auto;
+}
+
+.mod_wow_guild_rank * {
+    position: absolute;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.mod_wow_guild_rank .image {
+    height: 200px;
+    background-repeat: no-repeat;
+    background-size: 200px 200px;
 }
 
 .mod_wow_guild_rank .rank {
-    background-repeat: no-repeat;
-    background-size: 200px 200px;
-    height: 200px;
-    width: 200px;
-    margin: 0 auto;
+    height: 100%;
     line-height: 155px;
     font-weight: bold;
-    user-select: none;
+}
+
+.mod_wow_guild_rank .display {
+    bottom: 27px;
+    text-shadow: 1px 1px #000;
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+}
+
+.mod_wow_guild_rank .source {
+    display: block;
+    bottom: 0;
+}
+
+.mod_wow_guild_rank.white .image {
+    background-image: url('./images/rank_white.png');
+}
+
+.mod_wow_guild_rank.gold .image {
+    background-image: url('./images/rank_gold.png');
+}
+
+.mod_wow_guild_rank.silver .image {
+    background-image: url('./images/rank_silver.png');
+}
+
+.mod_wow_guild_rank.bronze .image {
+    background-image: url('./images/rank_bronze.png');
 }
 
 .mod_wow_guild_rank .rank.size9 {
@@ -30,33 +65,19 @@
     font-size: 50px;
 }
 
-.mod_wow_guild_rank .rank.white {
-    background-image: url('./images/rank_white.png');
+.mod_wow_guild_rank .white .rank {
     color: #fff;
     text-shadow: 1px 1px #868789;
 }
 
-.mod_wow_guild_rank .rank.gold {
-    background-image: url('./images/rank_gold.png');
+.mod_wow_guild_rank.gold .rank {
     color: #F8B32C;
 }
 
-.mod_wow_guild_rank .rank.silver {
-    background-image: url('./images/rank_silver.png');
+.mod_wow_guild_rank.silver .rank {
     color: #B5B7B5;
 }
 
-.mod_wow_guild_rank .rank.white {
-    background-image: url('./images/rank_white.png');
+.mod_wow_guild_rank.bronze .rank {
     color: #AE6848;
-}
-
-.mod_wow_guild_rank .display {
-    position: absolute;
-    bottom: 30px;
-    left: 88px;
-    text-shadow: 1px 1px #000;
-    font-weight: bold;
-    font-size: 25px;
-    color: white;
 }

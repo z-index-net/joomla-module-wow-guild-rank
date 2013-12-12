@@ -48,15 +48,15 @@ abstract class mod_wow_guild_rank
 
         switch ($retval->display) {
             case ($retval->display <= 9):
-                $retval->size = ' size9';
+                $retval->size = 'size9';
                 break;
 
             case ($retval->display <= 99):
-                $retval->size = ' size99';
+                $retval->size = 'size99';
                 break;
 
             case ($retval->display <= 999):
-                $retval->size = ' size999';
+                $retval->size = 'size999';
                 break;
         }
 
