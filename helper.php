@@ -73,10 +73,10 @@ abstract class mod_wow_guild_rank
 
         if (!$result = $cache->get($key)) {
             try {
-                $http = new JHttp(new JRegistry, new JHttpTransportCurl(new JRegistry));
+                $http = JHttpFactory::getHttp();
                 $http->setOption('userAgent', 'Joomla! ' . JVERSION . '; WoW Guild Rank; php/' . phpversion());
 
-                $result = $http->get($url, null, $params->get('timeout', 10));
+                $result = JHttpFactory::getHttp()->get($url, null, $params->get('timeout', 10));
             } catch (Exception $e) {
                 return $e->getMessage();
             }
@@ -85,9 +85,7 @@ abstract class mod_wow_guild_rank
         }
 
         if ($result->code != 200) {
-            return __CLASS__ . ' HTTP-Status ' . JHtml::_('link', 'http://wikipedia.org/wiki/List_of_HTTP_status_codes#' . $result->code, $result->code, array(
-                'target' => '_blank'
-            ));
+            return __CLASS__ . ' HTTP-Status ' . JHtml::_('link', 'http://wikipedia.org/wiki/List_of_HTTP_status_codes#' . $result->code, $result->code, array('target' => '_blank'));
         }
 
         return json_decode($result->body);
