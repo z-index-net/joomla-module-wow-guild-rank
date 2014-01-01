@@ -2,7 +2,7 @@
 <extension type="module" version="2.5" client="site" method="upgrade">
     <name>MOD_WOW_GUILD_RANK</name>
     <author>Branko Wilhelm</author>
-    <creationDate>Nov 2013</creationDate>
+    <creationDate>Nov 2014</creationDate>
     <copyright>(C) 2013 Branko Wilhelm</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <authorEmail>branko.wilhelm@gmail.com</authorEmail>
@@ -12,6 +12,7 @@
     <files>
         <filename module="mod_wow_guild_rank">mod_wow_guild_rank.php</filename>
         <filename>helper.php</filename>
+        <folder>fields</folder>
         <folder>tmpl</folder>
     </files>
     <scriptfile>script.installer.php</scriptfile>
@@ -25,7 +26,7 @@
         <server type="collection" priority="1" name="z-index development">http://www.z-index.net/en/extensions.xml</server>
     </updateservers>
     <config>
-        <fields name="params">
+        <fields name="params" addfieldpath="/modules/mod_wow_guild_rank/fields/">
             <fieldset name="basic">
                 <field name="source" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_SOURCE_LABEL">
                     <option value="">JSELECT</option>
@@ -55,6 +56,7 @@
                 </field>
                 <field name="cache_time" type="text" filter="integer" default="60" size="5" required="true" label="MOD_WOW_GUILD_RANK_CACHE_LABEL" description="MOD_WOW_GUILD_RANK_CACHE_DESC" />
                 <field name="timeout" type="text" filter="integer" default="10" size="5" required="true" label="MOD_WOW_GUILD_RANK_TIMEOUT_LABEL" description="MOD_WOW_GUILD_RANK_TIMEOUT_DESC" />
+                <field name="ajax" type="ajax" class="btn-group" label="Ajax" default="0" />
             </fieldset>
             <fieldset name="advanced">
                 <field name="layout" type="modulelayout" label="JFIELD_ALT_LAYOUT_LABEL" description="JFIELD_ALT_MODULE_LAYOUT_DESC" />

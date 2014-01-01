@@ -9,11 +9,38 @@
 
 defined('_JEXEC') or die;
 
-abstract class mod_wow_guild_rank
+abstract class ModWowGuildRankHelper
 {
 
-    public static function _(JRegistry &$params)
+    public static function getAjax()
     {
+        $module = JModuleHelper::getModule('mod_' . JFactory::getApplication()->input->get('module'));
+
+        if (empty($module)) {
+            return false;
+        }
+
+        JFactory::getLanguage()->load($module->module);
+
+        $params = new JRegistry($module->params);
+        $params->set('ajax', 0);
+
+        ob_start();
+
+        require(dirname(__FILE__) . '/' . $module->module . '.php');
+
+        return ob_get_clean();
+    }
+
+    public static function getData(JRegistry &$params)
+    {
+        if ($params->get('ajax')) {
+            return;
+        }
+
+        $params->set('guild', rawurlencode(JString::strtolower($params->get('guild'))));
+        $params->set('realm', rawurlencode(JString::strtolower($params->get('realm'))));
+
         $retval = new stdClass;
 
         switch ($params->get('source')) {
@@ -63,7 +90,7 @@ abstract class mod_wow_guild_rank
         return $retval;
     }
 
-    private static function remoteContent($url, JRegistry $params)
+    private static function remoteContent($url, JRegistry &$params)
     {
         $cache = JFactory::getCache('wow', 'output');
         $cache->setCaching(1);
