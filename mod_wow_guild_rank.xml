@@ -2,8 +2,8 @@
 <extension type="module" version="2.5" client="site" method="upgrade">
     <name>MOD_WOW_GUILD_RANK</name>
     <author>Branko Wilhelm</author>
-    <creationDate>Nov 2014</creationDate>
-    <copyright>(C) 2013 Branko Wilhelm</copyright>
+    <creationDate>Nov 2013</creationDate>
+    <copyright>(C) 2013 - 2014 Branko Wilhelm</copyright>
     <license>GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html</license>
     <authorEmail>branko.wilhelm@gmail.com</authorEmail>
     <authorUrl>www.z-index.net</authorUrl>
@@ -37,6 +37,11 @@
                     <option value="">JSELECT</option>
                     <option value="realm">MOD_WOW_GUILD_RANK_DISPLAY_REALM</option>
                     <option value="world">MOD_WOW_GUILD_RANK_DISPLAY_WORLD</option>
+                </field>
+                <field name="size" type="list" default="" label="MOD_WOW_GUILD_RANK_SIZE_LABEL" description="MOD_WOW_GUILD_RANK_SIZE_DESC">
+                    <option value="">MOD_WOW_GUILD_RANK_SIZE_GLOBAL</option>
+                    <option value="10">MOD_WOW_GUILD_RANK_SIZE_10</option>
+                    <option value="25">MOD_WOW_GUILD_RANK_SIZE_25</option>
                 </field>
                 <field name="color" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_COLOR_LABEL">
                     <option value="gold">MOD_WOW_GUILD_RANK_COLOR_GOLD</option>

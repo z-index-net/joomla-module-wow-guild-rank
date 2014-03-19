@@ -3,7 +3,7 @@
 /**
  * @author     Branko Wilhelm <branko.wilhelm@gmail.com>
  * @link       http://www.z-index.net
- * @copyright  (c) 2013 Branko Wilhelm
+ * @copyright  (c) 2013 - 2014 Branko Wilhelm
  * @license    GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  */
 
@@ -52,8 +52,8 @@ abstract class ModWowGuildRankHelper
                     return JText::sprintf('MOD_WOW_GUILD_RANK_DATA_ERROR', $params->get('source'));
                 }
 
-                $retval->realm = $data->guildox->guild->RealmRank;
-                $retval->world = $data->guildox->guild->WorldRank;
+                $retval->realm = $data->guildox->guild->{'RealmRank' . $params->get('size')};
+                $retval->world = $data->guildox->guild->{'WorldRank' . $params->get('size')};
                 $retval->url = 'http://www.guildox.com/wow/guild/' . $params->get('region') . '/' . $params->get('realm') . '/' . $params->get('guild');
                 break;
 
