@@ -38,19 +38,19 @@
 }
 
 .mod_wow_guild_rank.white .image {
-    background-image: url('./images/rank_white.png');
+    background-image: url('../images/rank_white.png');
 }
 
 .mod_wow_guild_rank.gold .image {
-    background-image: url('./images/rank_gold.png');
+    background-image: url('../images/rank_gold.png');
 }
 
 .mod_wow_guild_rank.silver .image {
-    background-image: url('./images/rank_silver.png');
+    background-image: url('../images/rank_silver.png');
 }
 
 .mod_wow_guild_rank.bronze .image {
-    background-image: url('./images/rank_bronze.png');
+    background-image: url('../images/rank_bronze.png');
 }
 
 .mod_wow_guild_rank .rank.size9 {
