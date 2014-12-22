@@ -6,7 +6,7 @@
  * @copyright  (c) 2013 - 2015 Branko Wilhelm
  * @license    GNU/GPLv3 http://www.gnu.org/licenses/gpl-3.0.html
  *
- * @var        array $contributors
+ * @var        stdClass $rank
  * @var        stdClass $module
  * @var        Joomla\Registry\Registry $params
  */
