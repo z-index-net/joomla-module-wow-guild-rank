@@ -13,31 +13,45 @@ class ModWowGuildRankHelper extends WoWModuleAbstract
 {
     protected function getInternalData()
     {
-        try {
+        try
+        {
             $result = WoW::getInstance()->getAdapter($this->params->module->get('source'))->getData();
-        } catch (Exception $e) {
+        } catch (Exception $e)
+        {
             return $e->getMessage();
         }
 
         $retval = new stdClass;
 
-        switch ($this->params->module->get('source', 'wowprogress')) {
+        switch ($this->params->module->get('source', 'wowprogress'))
+        {
             case 'guildox':
-                $retval->realm = $result->body->guildox->guild->{'RealmRank' . $this->params->module->get('size')};
-                $retval->world = $result->body->guildox->guild->{'WorldRank' . $this->params->module->get('size')};
+                foreach ($result->body->rank as $option)
+                {
+                    if (strtolower($option->name) == 'raid')
+                    {
+                        $retval->rank = $option->rank->realm;
+                        $retval->region = $option->rank->region;
+                        break;
+                    }
+                }
+
+                $retval->world = $result->body->guild->world_rank;
                 $retval->url = 'http://www.guildox.com/wow/guild/' . $this->params->global->get('region') . '/' . $this->params->global->get('realm') . '/' . $this->params->global->get('guild');
                 break;
 
             case 'wowprogress':
                 $retval->realm = $result->body->realm_rank;
                 $retval->world = $result->body->world_rank;
+                $retval->region = $result->body->area_rank;
                 $retval->url = 'http://www.wowprogress.com/guild/' . $this->params->global->get('region') . '/' . $this->params->global->get('realm') . '/' . $this->params->global->get('guild');
                 break;
         }
 
         $retval->display = $retval->{$this->params->module->get('display', 'realm')};
 
-        switch ($retval->display) {
+        switch ($retval->display)
+        {
             case ($retval->display <= 9):
                 $retval->size = 'size9';
                 break;

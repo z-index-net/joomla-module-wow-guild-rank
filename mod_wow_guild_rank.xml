@@ -39,16 +39,12 @@
                 <field name="display" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_DISPLAY_LABEL">
                     <option value="">JSELECT</option>
                     <option value="realm">MOD_WOW_GUILD_RANK_DISPLAY_REALM</option>
+                    <option value="region">MOD_WOW_GUILD_RANK_DISPLAY_REGION</option>
                     <option value="world">MOD_WOW_GUILD_RANK_DISPLAY_WORLD</option>
-                </field>
-                <field name="size" type="list" default="" label="MOD_WOW_GUILD_RANK_SIZE_LABEL" description="MOD_WOW_GUILD_RANK_SIZE_DESC">
-                    <option value="">MOD_WOW_GUILD_RANK_SIZE_GLOBAL</option>
-                    <option value="10">MOD_WOW_GUILD_RANK_SIZE_10</option>
-                    <option value="25">MOD_WOW_GUILD_RANK_SIZE_25</option>
                 </field>
                 <field name="color" type="list" default="" required="true" label="MOD_WOW_GUILD_RANK_COLOR_LABEL">
                     <option value="gold">MOD_WOW_GUILD_RANK_COLOR_GOLD</option>
-                    <option value="silver">MOD_WOW_GUILD_RANK_COLOR_GOLD</option>
+                    <option value="silver">MOD_WOW_GUILD_RANK_COLOR_SILVER</option>
                     <option value="bronze">MOD_WOW_GUILD_RANK_COLOR_BRONZE</option>
                     <option value="white">MOD_WOW_GUILD_RANK_COLOR_WHITE</option>
                 </field>
