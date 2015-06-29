@@ -30,7 +30,7 @@ class ModWowGuildRankHelper extends WoWModuleAbstract
                 {
                     if (strtolower($option->name) == 'raid')
                     {
-                        $retval->rank = $option->rank->realm;
+                        $retval->realm = $option->rank->realm;
                         $retval->region = $option->rank->region;
                         break;
                     }
