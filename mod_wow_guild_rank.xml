@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="2.5" client="site" method="upgrade">
+<extension type="module" version="3.0" client="site" method="upgrade">
     <name>MOD_WOW_GUILD_RANK</name>
     <author>Branko Wilhelm</author>
     <creationDate>Nov 2013</creationDate>
@@ -22,7 +22,8 @@
         <language tag="de-DE">de-DE/de-DE.mod_wow_guild_rank.sys.ini</language>
     </languages>
     <updateservers>
-        <server type="extension" priority="1" name="WoW Guild Rank"">https://raw.githubusercontent.com/z-index-net/joomla-module-wow-guild-rank/master/updatestream.xml</server>
+        <server type="extension" priority="1" name="WoW Guild Rank"
+">https://raw.githubusercontent.com/z-index-net/joomla-module-wow-guild-rank/master/updatestream.xml</server>
     </updateservers>
     <media folder="media" destination="mod_wow_guild_rank">
         <folder>css</folder>
